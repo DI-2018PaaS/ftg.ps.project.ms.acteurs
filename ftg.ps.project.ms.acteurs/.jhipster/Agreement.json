@@ -1,19 +1,5 @@
 {
-    "fluentMethods": true,
-    "relationships": [
-        {
-            "relationshipType": "one-to-many",
-            "relationshipName": "amimateur",
-            "otherEntityName": "animateur",
-            "otherEntityRelationshipName": "agreement"
-        },
-        {
-            "relationshipType": "one-to-many",
-            "relationshipName": "fournisseur",
-            "otherEntityName": "fournisseur",
-            "otherEntityRelationshipName": "agreement"
-        }
-    ],
+    "name": "Agreement",
     "fields": [
         {
             "fieldName": "agreementId",
@@ -56,11 +42,28 @@
             "fieldType": "LocalDate"
         }
     ],
-    "changelogDate": "20180726110745",
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "amimateur",
+            "otherEntityName": "animateur",
+            "otherEntityRelationshipName": "agreement"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "fournisseur",
+            "otherEntityName": "fournisseur",
+            "otherEntityRelationshipName": "agreement"
+        }
+    ],
+    "changelogDate": "20180727161020",
     "entityTableName": "agreement",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }

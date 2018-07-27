@@ -1,37 +1,5 @@
 {
-    "fluentMethods": true,
-    "relationships": [
-        {
-            "relationshipType": "one-to-one",
-            "relationshipName": "clientBanque",
-            "otherEntityName": "banque",
-            "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "acheteur"
-        },
-        {
-            "relationshipType": "one-to-one",
-            "relationshipName": "clientOrga",
-            "otherEntityName": "organisme",
-            "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "acheteur"
-        },
-        {
-            "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeAcheteur",
-            "otherEntityName": "acteurType",
-            "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "acheteur"
-        },
-        {
-            "relationshipType": "one-to-many",
-            "relationshipName": "acontacts",
-            "otherEntityName": "contact",
-            "otherEntityRelationshipName": "acheteur"
-        }
-    ],
+    "name": "Acheteur",
     "fields": [
         {
             "fieldName": "acheteurId",
@@ -74,11 +42,46 @@
             "fieldType": "LocalDate"
         }
     ],
-    "changelogDate": "20180726110742",
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "clientBanque",
+            "otherEntityName": "banque",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "acheteur"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "clientOrga",
+            "otherEntityName": "organisme",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "acheteur"
+        },
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "acteurTypeAcheteur",
+            "otherEntityName": "acteurType",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "acheteur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "acontacts",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "acheteur"
+        }
+    ],
+    "changelogDate": "20180727161017",
     "entityTableName": "acheteur",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }

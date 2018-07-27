@@ -1,5 +1,47 @@
 {
-    "fluentMethods": true,
+    "name": "Fournisseur",
+    "fields": [
+        {
+            "fieldName": "fournisseurId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userCreated",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userLastModif",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateLastModif",
+            "fieldType": "LocalDate"
+        }
+    ],
     "relationships": [
         {
             "relationshipType": "one-to-one",
@@ -44,53 +86,14 @@
             "otherEntityField": "id"
         }
     ],
-    "fields": [
-        {
-            "fieldName": "fournisseurId",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "type",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "nom",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "prenom",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "email",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "telephone",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "userCreated",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "userLastModif",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "dateCreated",
-            "fieldType": "LocalDate"
-        },
-        {
-            "fieldName": "dateLastModif",
-            "fieldType": "LocalDate"
-        }
-    ],
-    "changelogDate": "20180726110741",
+    "changelogDate": "20180727161016",
     "entityTableName": "fournisseur",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }

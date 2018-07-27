@@ -1,5 +1,43 @@
 {
-    "fluentMethods": true,
+    "name": "Contact",
+    "fields": [
+        {
+            "fieldName": "contactId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "userCreated",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userLastModif",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "dateCreated",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateLastModif",
+            "fieldType": "LocalDate"
+        }
+    ],
     "relationships": [
         {
             "relationshipName": "organisme",
@@ -40,49 +78,14 @@
             "otherEntityField": "id"
         }
     ],
-    "fields": [
-        {
-            "fieldName": "contactId",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "nom",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "prenom",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "email",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "telephone",
-            "fieldType": "String"
-        },
-        {
-            "fieldName": "userCreated",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "userLastModif",
-            "fieldType": "Long"
-        },
-        {
-            "fieldName": "dateCreated",
-            "fieldType": "LocalDate"
-        },
-        {
-            "fieldName": "dateLastModif",
-            "fieldType": "LocalDate"
-        }
-    ],
-    "changelogDate": "20180726110738",
+    "changelogDate": "20180727161013",
     "entityTableName": "contact",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }
