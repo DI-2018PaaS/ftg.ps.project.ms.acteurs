@@ -1,6 +1,5 @@
 {
-    "fluentMethods": true,
-    "relationships": [],
+    "name": "ActeurType",
     "fields": [
         {
             "fieldName": "idActeurType",
@@ -11,11 +10,15 @@
             "fieldType": "String"
         }
     ],
-    "changelogDate": "20180726110744",
+    "relationships": [],
+    "changelogDate": "20180727161019",
     "entityTableName": "acteur_type",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }

@@ -1,21 +1,5 @@
 {
-    "fluentMethods": true,
-    "relationships": [
-        {
-            "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeBanque",
-            "otherEntityName": "acteurType",
-            "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "banque"
-        },
-        {
-            "relationshipType": "one-to-many",
-            "relationshipName": "bcontacts",
-            "otherEntityName": "contact",
-            "otherEntityRelationshipName": "banque"
-        }
-    ],
+    "name": "Banque",
     "fields": [
         {
             "fieldName": "banqueId",
@@ -62,11 +46,30 @@
             "fieldType": "LocalDate"
         }
     ],
-    "changelogDate": "20180726110739",
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "acteurTypeBanque",
+            "otherEntityName": "acteurType",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "banque"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "bcontacts",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "banque"
+        }
+    ],
+    "changelogDate": "20180727161014",
     "entityTableName": "banque",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }

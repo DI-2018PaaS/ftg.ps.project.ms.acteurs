@@ -1,21 +1,5 @@
 {
-    "fluentMethods": true,
-    "relationships": [
-        {
-            "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeOrganisme",
-            "otherEntityName": "acteurType",
-            "otherEntityField": "id",
-            "ownerSide": true,
-            "otherEntityRelationshipName": "organisme"
-        },
-        {
-            "relationshipType": "one-to-many",
-            "relationshipName": "ocontacts",
-            "otherEntityName": "contact",
-            "otherEntityRelationshipName": "organisme"
-        }
-    ],
+    "name": "Organisme",
     "fields": [
         {
             "fieldName": "organismeId",
@@ -58,11 +42,30 @@
             "fieldType": "LocalDate"
         }
     ],
-    "changelogDate": "20180726110737",
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "acteurTypeOrganisme",
+            "otherEntityName": "acteurType",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "organisme"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "ocontacts",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "organisme"
+        }
+    ],
+    "changelogDate": "20180727161012",
     "entityTableName": "organisme",
     "dto": "no",
     "pagination": "no",
     "service": "no",
     "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*",
     "microserviceName": "acteur"
 }
