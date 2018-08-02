@@ -45,7 +45,7 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeOrganisme",
+            "relationshipName": "acteurType",
             "otherEntityName": "acteurType",
             "otherEntityField": "id",
             "ownerSide": true,

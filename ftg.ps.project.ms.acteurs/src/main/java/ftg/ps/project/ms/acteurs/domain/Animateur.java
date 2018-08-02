@@ -57,18 +57,21 @@ public class Animateur implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private ActeurType acteurTypeAnimateur;
+    private ActeurType acteurType;
 
     @OneToMany(mappedBy = "animateur")
     private Set<Contact> ancontacts = new HashSet<>();
 
-    @ManyToOne
-    @JsonIgnoreProperties("amimateurs")
-    private Agreement agreement;
+    @OneToMany(mappedBy = "animateur")
+    private Set<Fournisseur> agrees = new HashSet<>();
 
     @ManyToOne
-    @JsonIgnoreProperties("anAnimateurs")
-    private AnimateurFournisseur animateurFournisseur;
+    @JsonIgnoreProperties("anims")
+    private Fournisseur fournisseur;
+
+    @ManyToOne
+    @JsonIgnoreProperties("agAnimateurs")
+    private Agreement agreement;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -209,17 +212,17 @@ public class Animateur implements Serializable {
         this.dateLastModif = dateLastModif;
     }
 
-    public ActeurType getActeurTypeAnimateur() {
-        return acteurTypeAnimateur;
+    public ActeurType getActeurType() {
+        return acteurType;
     }
 
-    public Animateur acteurTypeAnimateur(ActeurType acteurType) {
-        this.acteurTypeAnimateur = acteurType;
+    public Animateur acteurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
         return this;
     }
 
-    public void setActeurTypeAnimateur(ActeurType acteurType) {
-        this.acteurTypeAnimateur = acteurType;
+    public void setActeurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
     }
 
     public Set<Contact> getAncontacts() {
@@ -247,6 +250,44 @@ public class Animateur implements Serializable {
         this.ancontacts = contacts;
     }
 
+    public Set<Fournisseur> getAgrees() {
+        return agrees;
+    }
+
+    public Animateur agrees(Set<Fournisseur> fournisseurs) {
+        this.agrees = fournisseurs;
+        return this;
+    }
+
+    public Animateur addAgree(Fournisseur fournisseur) {
+        this.agrees.add(fournisseur);
+        fournisseur.setAnimateur(this);
+        return this;
+    }
+
+    public Animateur removeAgree(Fournisseur fournisseur) {
+        this.agrees.remove(fournisseur);
+        fournisseur.setAnimateur(null);
+        return this;
+    }
+
+    public void setAgrees(Set<Fournisseur> fournisseurs) {
+        this.agrees = fournisseurs;
+    }
+
+    public Fournisseur getFournisseur() {
+        return fournisseur;
+    }
+
+    public Animateur fournisseur(Fournisseur fournisseur) {
+        this.fournisseur = fournisseur;
+        return this;
+    }
+
+    public void setFournisseur(Fournisseur fournisseur) {
+        this.fournisseur = fournisseur;
+    }
+
     public Agreement getAgreement() {
         return agreement;
     }
@@ -258,19 +299,6 @@ public class Animateur implements Serializable {
 
     public void setAgreement(Agreement agreement) {
         this.agreement = agreement;
-    }
-
-    public AnimateurFournisseur getAnimateurFournisseur() {
-        return animateurFournisseur;
-    }
-
-    public Animateur animateurFournisseur(AnimateurFournisseur animateurFournisseur) {
-        this.animateurFournisseur = animateurFournisseur;
-        return this;
-    }
-
-    public void setAnimateurFournisseur(AnimateurFournisseur animateurFournisseur) {
-        this.animateurFournisseur = animateurFournisseur;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 

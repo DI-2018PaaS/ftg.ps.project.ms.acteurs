@@ -64,7 +64,7 @@ public class Acheteur implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private ActeurType acteurTypeAcheteur;
+    private ActeurType acteurType;
 
     @OneToMany(mappedBy = "acheteur")
     private Set<Contact> acontacts = new HashSet<>();
@@ -234,17 +234,17 @@ public class Acheteur implements Serializable {
         this.clientOrga = organisme;
     }
 
-    public ActeurType getActeurTypeAcheteur() {
-        return acteurTypeAcheteur;
+    public ActeurType getActeurType() {
+        return acteurType;
     }
 
-    public Acheteur acteurTypeAcheteur(ActeurType acteurType) {
-        this.acteurTypeAcheteur = acteurType;
+    public Acheteur acteurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
         return this;
     }
 
-    public void setActeurTypeAcheteur(ActeurType acteurType) {
-        this.acteurTypeAcheteur = acteurType;
+    public void setActeurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
     }
 
     public Set<Contact> getAcontacts() {

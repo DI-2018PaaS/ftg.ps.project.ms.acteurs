@@ -60,18 +60,18 @@
             <column name="date_last_modif" type="date">
                 <constraints nullable="true" />
             </column>
+
+            <column name="animateur_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
             <column name="foclient_banque_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>            <column name="foclient_orga_id" type="bigint">
                 <constraints unique="true" nullable="true" />
-            </column>            <column name="acteur_type_fournisseur_id" type="bigint">
+            </column>            <column name="acteur_type_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
             <column name="agreement_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="animateur_fournisseur_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 

@@ -60,7 +60,7 @@
             <column name="date_last_modif" type="date">
                 <constraints nullable="true" />
             </column>
-            <column name="acteur_type_organisme_id" type="bigint">
+            <column name="acteur_type_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->

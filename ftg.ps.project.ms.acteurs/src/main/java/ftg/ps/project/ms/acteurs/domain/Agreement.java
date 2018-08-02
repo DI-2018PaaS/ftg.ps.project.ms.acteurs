@@ -54,11 +54,14 @@ public class Agreement implements Serializable {
     @Column(name = "date_last_modif")
     private LocalDate dateLastModif;
 
-    @OneToMany(mappedBy = "agreement")
-    private Set<Animateur> amimateurs = new HashSet<>();
+    @Column(name = "niveau_agreement")
+    private Integer niveauAgreement;
 
     @OneToMany(mappedBy = "agreement")
-    private Set<Fournisseur> fournisseurs = new HashSet<>();
+    private Set<Fournisseur> agFournisseurs = new HashSet<>();
+
+    @OneToMany(mappedBy = "agreement")
+    private Set<Animateur> agAnimateurs = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -199,54 +202,67 @@ public class Agreement implements Serializable {
         this.dateLastModif = dateLastModif;
     }
 
-    public Set<Animateur> getAmimateurs() {
-        return amimateurs;
+    public Integer getNiveauAgreement() {
+        return niveauAgreement;
     }
 
-    public Agreement amimateurs(Set<Animateur> animateurs) {
-        this.amimateurs = animateurs;
+    public Agreement niveauAgreement(Integer niveauAgreement) {
+        this.niveauAgreement = niveauAgreement;
         return this;
     }
 
-    public Agreement addAmimateur(Animateur animateur) {
-        this.amimateurs.add(animateur);
-        animateur.setAgreement(this);
+    public void setNiveauAgreement(Integer niveauAgreement) {
+        this.niveauAgreement = niveauAgreement;
+    }
+
+    public Set<Fournisseur> getAgFournisseurs() {
+        return agFournisseurs;
+    }
+
+    public Agreement agFournisseurs(Set<Fournisseur> fournisseurs) {
+        this.agFournisseurs = fournisseurs;
         return this;
     }
 
-    public Agreement removeAmimateur(Animateur animateur) {
-        this.amimateurs.remove(animateur);
-        animateur.setAgreement(null);
-        return this;
-    }
-
-    public void setAmimateurs(Set<Animateur> animateurs) {
-        this.amimateurs = animateurs;
-    }
-
-    public Set<Fournisseur> getFournisseurs() {
-        return fournisseurs;
-    }
-
-    public Agreement fournisseurs(Set<Fournisseur> fournisseurs) {
-        this.fournisseurs = fournisseurs;
-        return this;
-    }
-
-    public Agreement addFournisseur(Fournisseur fournisseur) {
-        this.fournisseurs.add(fournisseur);
+    public Agreement addAgFournisseur(Fournisseur fournisseur) {
+        this.agFournisseurs.add(fournisseur);
         fournisseur.setAgreement(this);
         return this;
     }
 
-    public Agreement removeFournisseur(Fournisseur fournisseur) {
-        this.fournisseurs.remove(fournisseur);
+    public Agreement removeAgFournisseur(Fournisseur fournisseur) {
+        this.agFournisseurs.remove(fournisseur);
         fournisseur.setAgreement(null);
         return this;
     }
 
-    public void setFournisseurs(Set<Fournisseur> fournisseurs) {
-        this.fournisseurs = fournisseurs;
+    public void setAgFournisseurs(Set<Fournisseur> fournisseurs) {
+        this.agFournisseurs = fournisseurs;
+    }
+
+    public Set<Animateur> getAgAnimateurs() {
+        return agAnimateurs;
+    }
+
+    public Agreement agAnimateurs(Set<Animateur> animateurs) {
+        this.agAnimateurs = animateurs;
+        return this;
+    }
+
+    public Agreement addAgAnimateur(Animateur animateur) {
+        this.agAnimateurs.add(animateur);
+        animateur.setAgreement(this);
+        return this;
+    }
+
+    public Agreement removeAgAnimateur(Animateur animateur) {
+        this.agAnimateurs.remove(animateur);
+        animateur.setAgreement(null);
+        return this;
+    }
+
+    public void setAgAnimateurs(Set<Animateur> animateurs) {
+        this.agAnimateurs = animateurs;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
@@ -284,6 +300,7 @@ public class Agreement implements Serializable {
             ", userLastModif=" + getUserLastModif() +
             ", dateCreated='" + getDateCreated() + "'" +
             ", dateLastModif='" + getDateLastModif() + "'" +
+            ", niveauAgreement=" + getNiveauAgreement() +
             "}";
     }
 }

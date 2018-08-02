@@ -60,14 +60,14 @@
             <column name="date_last_modif" type="date">
                 <constraints nullable="true" />
             </column>
-            <column name="acteur_type_animateur_id" type="bigint">
+            <column name="acteur_type_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
-            <column name="agreement_id" type="bigint">
+            <column name="fournisseur_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 
-            <column name="animateur_fournisseur_id" type="bigint">
+            <column name="agreement_id" type="bigint">
                 <constraints nullable="true" />
             </column>
 

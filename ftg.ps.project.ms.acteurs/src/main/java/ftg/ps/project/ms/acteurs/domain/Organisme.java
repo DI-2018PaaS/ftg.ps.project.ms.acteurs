@@ -56,7 +56,7 @@ public class Organisme implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private ActeurType acteurTypeOrganisme;
+    private ActeurType acteurType;
 
     @OneToMany(mappedBy = "organisme")
     private Set<Contact> ocontacts = new HashSet<>();
@@ -200,17 +200,17 @@ public class Organisme implements Serializable {
         this.dateLastModif = dateLastModif;
     }
 
-    public ActeurType getActeurTypeOrganisme() {
-        return acteurTypeOrganisme;
+    public ActeurType getActeurType() {
+        return acteurType;
     }
 
-    public Organisme acteurTypeOrganisme(ActeurType acteurType) {
-        this.acteurTypeOrganisme = acteurType;
+    public Organisme acteurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
         return this;
     }
 
-    public void setActeurTypeOrganisme(ActeurType acteurType) {
-        this.acteurTypeOrganisme = acteurType;
+    public void setActeurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
     }
 
     public Set<Contact> getOcontacts() {

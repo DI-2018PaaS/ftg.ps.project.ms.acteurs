@@ -61,7 +61,7 @@
         },
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeAcheteur",
+            "relationshipName": "acteurType",
             "otherEntityName": "acteurType",
             "otherEntityField": "id",
             "ownerSide": true,

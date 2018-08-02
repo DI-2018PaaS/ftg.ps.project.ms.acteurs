@@ -8,23 +8,23 @@
     -->
     <changeSet id="20180727161015-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="acteur_type_animateur_id"
+        <addForeignKeyConstraint baseColumnNames="acteur_type_id"
                                  baseTableName="animateur"
-                                 constraintName="fk_animateur_acteur_type_animateur_id"
+                                 constraintName="fk_animateur_acteur_type_id"
                                  referencedColumnNames="id"
                                  referencedTableName="acteur_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="fournisseur_id"
+                                 baseTableName="animateur"
+                                 constraintName="fk_animateur_fournisseur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fournisseur"/>
 
         <addForeignKeyConstraint baseColumnNames="agreement_id"
                                  baseTableName="animateur"
                                  constraintName="fk_animateur_agreement_id"
                                  referencedColumnNames="id"
                                  referencedTableName="agreement"/>
-
-        <addForeignKeyConstraint baseColumnNames="animateur_fournisseur_id"
-                                 baseTableName="animateur"
-                                 constraintName="fk_animateur_animateur_fournisseur_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="animateur_fournisseur"/>
 
     </changeSet>
 </databaseChangeLog>

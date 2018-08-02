@@ -40,19 +40,23 @@
         {
             "fieldName": "dateLastModif",
             "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "niveauAgreement",
+            "fieldType": "Integer"
         }
     ],
     "relationships": [
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "amimateur",
-            "otherEntityName": "animateur",
+            "relationshipName": "agFournisseur",
+            "otherEntityName": "fournisseur",
             "otherEntityRelationshipName": "agreement"
         },
         {
             "relationshipType": "one-to-many",
-            "relationshipName": "fournisseur",
-            "otherEntityName": "fournisseur",
+            "relationshipName": "agAnimateur",
+            "otherEntityName": "animateur",
             "otherEntityRelationshipName": "agreement"
         }
     ],

@@ -64,7 +64,7 @@
                 <constraints unique="true" nullable="true" />
             </column>            <column name="client_orga_id" type="bigint">
                 <constraints unique="true" nullable="true" />
-            </column>            <column name="acteur_type_acheteur_id" type="bigint">
+            </column>            <column name="acteur_type_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->

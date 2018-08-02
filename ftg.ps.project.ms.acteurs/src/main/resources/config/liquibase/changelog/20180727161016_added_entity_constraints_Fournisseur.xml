@@ -8,6 +8,12 @@
     -->
     <changeSet id="20180727161016-2" author="jhipster">
         
+        <addForeignKeyConstraint baseColumnNames="animateur_id"
+                                 baseTableName="fournisseur"
+                                 constraintName="fk_fournisseur_animateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="animateur"/>
+
         <addForeignKeyConstraint baseColumnNames="foclient_banque_id"
                                  baseTableName="fournisseur"
                                  constraintName="fk_fournisseur_foclient_banque_id"
@@ -20,9 +26,9 @@
                                  referencedColumnNames="id"
                                  referencedTableName="organisme"/>
 
-        <addForeignKeyConstraint baseColumnNames="acteur_type_fournisseur_id"
+        <addForeignKeyConstraint baseColumnNames="acteur_type_id"
                                  baseTableName="fournisseur"
-                                 constraintName="fk_fournisseur_acteur_type_fournisseur_id"
+                                 constraintName="fk_fournisseur_acteur_type_id"
                                  referencedColumnNames="id"
                                  referencedTableName="acteur_type"/>
 
@@ -31,12 +37,6 @@
                                  constraintName="fk_fournisseur_agreement_id"
                                  referencedColumnNames="id"
                                  referencedTableName="agreement"/>
-
-        <addForeignKeyConstraint baseColumnNames="animateur_fournisseur_id"
-                                 baseTableName="fournisseur"
-                                 constraintName="fk_fournisseur_animateur_fournisseur_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="animateur_fournisseur"/>
 
     </changeSet>
 </databaseChangeLog>

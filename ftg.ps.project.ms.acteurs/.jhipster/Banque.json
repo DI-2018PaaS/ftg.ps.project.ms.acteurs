@@ -49,7 +49,7 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeBanque",
+            "relationshipName": "acteurType",
             "otherEntityName": "acteurType",
             "otherEntityField": "id",
             "ownerSide": true,

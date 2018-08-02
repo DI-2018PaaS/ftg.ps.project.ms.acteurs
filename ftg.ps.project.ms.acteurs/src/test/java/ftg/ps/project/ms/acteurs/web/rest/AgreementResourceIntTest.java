@@ -73,6 +73,9 @@ public class AgreementResourceIntTest {
     private static final LocalDate DEFAULT_DATE_LAST_MODIF = LocalDate.ofEpochDay(0L);
     private static final LocalDate UPDATED_DATE_LAST_MODIF = LocalDate.now(ZoneId.systemDefault());
 
+    private static final Integer DEFAULT_NIVEAU_AGREEMENT = 1;
+    private static final Integer UPDATED_NIVEAU_AGREEMENT = 2;
+
     @Autowired
     private AgreementRepository agreementRepository;
 
@@ -121,7 +124,8 @@ public class AgreementResourceIntTest {
             .userCreated(DEFAULT_USER_CREATED)
             .userLastModif(DEFAULT_USER_LAST_MODIF)
             .dateCreated(DEFAULT_DATE_CREATED)
-            .dateLastModif(DEFAULT_DATE_LAST_MODIF);
+            .dateLastModif(DEFAULT_DATE_LAST_MODIF)
+            .niveauAgreement(DEFAULT_NIVEAU_AGREEMENT);
         return agreement;
     }
 
@@ -155,6 +159,7 @@ public class AgreementResourceIntTest {
         assertThat(testAgreement.getUserLastModif()).isEqualTo(DEFAULT_USER_LAST_MODIF);
         assertThat(testAgreement.getDateCreated()).isEqualTo(DEFAULT_DATE_CREATED);
         assertThat(testAgreement.getDateLastModif()).isEqualTo(DEFAULT_DATE_LAST_MODIF);
+        assertThat(testAgreement.getNiveauAgreement()).isEqualTo(DEFAULT_NIVEAU_AGREEMENT);
     }
 
     @Test
@@ -196,7 +201,8 @@ public class AgreementResourceIntTest {
             .andExpect(jsonPath("$.[*].userCreated").value(hasItem(DEFAULT_USER_CREATED.intValue())))
             .andExpect(jsonPath("$.[*].userLastModif").value(hasItem(DEFAULT_USER_LAST_MODIF.intValue())))
             .andExpect(jsonPath("$.[*].dateCreated").value(hasItem(DEFAULT_DATE_CREATED.toString())))
-            .andExpect(jsonPath("$.[*].dateLastModif").value(hasItem(DEFAULT_DATE_LAST_MODIF.toString())));
+            .andExpect(jsonPath("$.[*].dateLastModif").value(hasItem(DEFAULT_DATE_LAST_MODIF.toString())))
+            .andExpect(jsonPath("$.[*].niveauAgreement").value(hasItem(DEFAULT_NIVEAU_AGREEMENT)));
     }
     
 
@@ -220,7 +226,8 @@ public class AgreementResourceIntTest {
             .andExpect(jsonPath("$.userCreated").value(DEFAULT_USER_CREATED.intValue()))
             .andExpect(jsonPath("$.userLastModif").value(DEFAULT_USER_LAST_MODIF.intValue()))
             .andExpect(jsonPath("$.dateCreated").value(DEFAULT_DATE_CREATED.toString()))
-            .andExpect(jsonPath("$.dateLastModif").value(DEFAULT_DATE_LAST_MODIF.toString()));
+            .andExpect(jsonPath("$.dateLastModif").value(DEFAULT_DATE_LAST_MODIF.toString()))
+            .andExpect(jsonPath("$.niveauAgreement").value(DEFAULT_NIVEAU_AGREEMENT));
     }
     @Test
     @Transactional
@@ -252,7 +259,8 @@ public class AgreementResourceIntTest {
             .userCreated(UPDATED_USER_CREATED)
             .userLastModif(UPDATED_USER_LAST_MODIF)
             .dateCreated(UPDATED_DATE_CREATED)
-            .dateLastModif(UPDATED_DATE_LAST_MODIF);
+            .dateLastModif(UPDATED_DATE_LAST_MODIF)
+            .niveauAgreement(UPDATED_NIVEAU_AGREEMENT);
 
         restAgreementMockMvc.perform(put("/api/agreements")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -273,6 +281,7 @@ public class AgreementResourceIntTest {
         assertThat(testAgreement.getUserLastModif()).isEqualTo(UPDATED_USER_LAST_MODIF);
         assertThat(testAgreement.getDateCreated()).isEqualTo(UPDATED_DATE_CREATED);
         assertThat(testAgreement.getDateLastModif()).isEqualTo(UPDATED_DATE_LAST_MODIF);
+        assertThat(testAgreement.getNiveauAgreement()).isEqualTo(UPDATED_NIVEAU_AGREEMENT);
     }
 
     @Test

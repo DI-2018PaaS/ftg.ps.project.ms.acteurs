@@ -44,6 +44,12 @@
     ],
     "relationships": [
         {
+            "relationshipName": "animateur",
+            "otherEntityName": "animateur",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
             "relationshipType": "one-to-one",
             "relationshipName": "foclientBanque",
             "otherEntityName": "banque",
@@ -61,7 +67,7 @@
         },
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeFournisseur",
+            "relationshipName": "acteurType",
             "otherEntityName": "acteurType",
             "otherEntityField": "id",
             "ownerSide": true,
@@ -74,14 +80,14 @@
             "otherEntityRelationshipName": "fournisseur"
         },
         {
-            "relationshipName": "agreement",
-            "otherEntityName": "agreement",
-            "relationshipType": "many-to-one",
-            "otherEntityField": "id"
+            "relationshipType": "one-to-many",
+            "relationshipName": "anim",
+            "otherEntityName": "animateur",
+            "otherEntityRelationshipName": "fournisseur"
         },
         {
-            "relationshipName": "animateurFournisseur",
-            "otherEntityName": "animateurFournisseur",
+            "relationshipName": "agreement",
+            "otherEntityName": "agreement",
             "relationshipType": "many-to-one",
             "otherEntityField": "id"
         }

@@ -45,7 +45,7 @@
     "relationships": [
         {
             "relationshipType": "one-to-one",
-            "relationshipName": "acteurTypeAnimateur",
+            "relationshipName": "acteurType",
             "otherEntityName": "acteurType",
             "otherEntityField": "id",
             "ownerSide": true,
@@ -58,14 +58,20 @@
             "otherEntityRelationshipName": "animateur"
         },
         {
-            "relationshipName": "agreement",
-            "otherEntityName": "agreement",
+            "relationshipType": "one-to-many",
+            "relationshipName": "agree",
+            "otherEntityName": "fournisseur",
+            "otherEntityRelationshipName": "animateur"
+        },
+        {
+            "relationshipName": "fournisseur",
+            "otherEntityName": "fournisseur",
             "relationshipType": "many-to-one",
             "otherEntityField": "id"
         },
         {
-            "relationshipName": "animateurFournisseur",
-            "otherEntityName": "animateurFournisseur",
+            "relationshipName": "agreement",
+            "otherEntityName": "agreement",
             "relationshipType": "many-to-one",
             "otherEntityField": "id"
         }

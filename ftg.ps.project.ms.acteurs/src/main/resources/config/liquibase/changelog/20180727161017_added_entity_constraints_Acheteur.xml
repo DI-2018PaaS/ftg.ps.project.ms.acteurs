@@ -20,9 +20,9 @@
                                  referencedColumnNames="id"
                                  referencedTableName="organisme"/>
 
-        <addForeignKeyConstraint baseColumnNames="acteur_type_acheteur_id"
+        <addForeignKeyConstraint baseColumnNames="acteur_type_id"
                                  baseTableName="acheteur"
-                                 constraintName="fk_acheteur_acteur_type_acheteur_id"
+                                 constraintName="fk_acheteur_acteur_type_id"
                                  referencedColumnNames="id"
                                  referencedTableName="acteur_type"/>
 

@@ -59,7 +59,7 @@ public class Banque implements Serializable {
 
     @OneToOne
     @JoinColumn(unique = true)
-    private ActeurType acteurTypeBanque;
+    private ActeurType acteurType;
 
     @OneToMany(mappedBy = "banque")
     private Set<Contact> bcontacts = new HashSet<>();
@@ -216,17 +216,17 @@ public class Banque implements Serializable {
         this.dateLastModif = dateLastModif;
     }
 
-    public ActeurType getActeurTypeBanque() {
-        return acteurTypeBanque;
+    public ActeurType getActeurType() {
+        return acteurType;
     }
 
-    public Banque acteurTypeBanque(ActeurType acteurType) {
-        this.acteurTypeBanque = acteurType;
+    public Banque acteurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
         return this;
     }
 
-    public void setActeurTypeBanque(ActeurType acteurType) {
-        this.acteurTypeBanque = acteurType;
+    public void setActeurType(ActeurType acteurType) {
+        this.acteurType = acteurType;
     }
 
     public Set<Contact> getBcontacts() {
