@@ -16,7 +16,7 @@ For further instructions on how to develop with JHipster, have a look at [Using 
 
 
 
-## Building for production
+## Building for productions
 
 To optimize the acteur application for production, run:
 
